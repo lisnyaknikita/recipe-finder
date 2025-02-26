@@ -1,6 +1,7 @@
 'use client';
 
-import { useState } from 'react';
+import { useRouter } from 'next/navigation';
+import { FormEvent, useState } from 'react';
 
 const cuisines = ['British', 'American', 'Chinese'];
 
@@ -9,9 +10,21 @@ export default function Home() {
   const [cuisine, setCuisine] = useState('');
   const [maxTime, setMaxTime] = useState('');
 
+  const router = useRouter();
+
   const isButtonEnabled = query || cuisine || maxTime;
 
-  const handleSubmit = () => {};
+  const handleSubmit = (e: FormEvent) => {
+    e.preventDefault();
+
+    const params = new URLSearchParams();
+
+    if (query) params.append('query', query);
+    if (cuisine) params.append('cuisine', cuisine);
+    if (maxTime) params.append('maxTime', maxTime);
+
+    router.push(`/recipes?${params.toString()}`);
+  };
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-600 p-4">
