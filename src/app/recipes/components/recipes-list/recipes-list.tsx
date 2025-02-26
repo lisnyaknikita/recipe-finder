@@ -22,7 +22,7 @@ export const RecipeList = async ({
   return (
     <>
       {recipes.length === 0 ? (
-        <p className="text-center text-white">No recipes found.</p>
+        <p className="text-center text-3xl text-rose-300">No recipes found.</p>
       ) : (
         <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {recipes.map((recipe: Recipe) => (

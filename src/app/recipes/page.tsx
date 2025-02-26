@@ -11,8 +11,10 @@ export default async function RecipesPage({
   const { query, cuisine, maxTime } = await searchParams;
 
   return (
-    <div className="min-h-screen bg-gray-600 p-4">
-      <h1 className="text-3xl font-bold text-center mb-6">Recipes</h1>
+    <div className="min-h-screen bg-violet-700 p-4">
+      <h1 className="text-4xl font-bold text-center text-rose-0 mb-6">
+        Recipes
+      </h1>
       <Suspense fallback={<RecipesLoader />}>
         <RecipeList query={query} cuisine={cuisine} maxTime={maxTime} />
       </Suspense>

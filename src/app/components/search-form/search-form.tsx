@@ -21,16 +21,19 @@ export const SearchForm = ({ onSubmit }: SearchFormProps) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col items-center">
+    <form
+      onSubmit={handleSubmit}
+      className="flex flex-col items-center w-[400px]"
+    >
       <input
         type="text"
         placeholder="Enter recipe query"
-        className="border rounded p-2 w-64 mb-3 text-black"
+        className="border rounded p-2 w-full mb-3 text-black"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
       />
       <select
-        className="border rounded p-2 w-64 mb-3 text-black"
+        className="border rounded p-2 w-full mb-3 text-black"
         value={cuisine}
         onChange={(e) => setCuisine(e.target.value)}
       >
@@ -44,13 +47,13 @@ export const SearchForm = ({ onSubmit }: SearchFormProps) => {
       <input
         type="number"
         placeholder="Maximum preparation time in minutes"
-        className="border rounded p-2 w-64 mb-3 text-black"
+        className="border rounded p-2 w-full mb-3 text-black"
         value={maxTime}
         onChange={(e) => setMaxTime(e.target.value)}
       />
       <button
-        className={`px-4 py-2 rounded text-black ${
-          isButtonEnabled ? 'bg-green-500 hover:bg-green-600' : 'bg-gray-300'
+        className={`px-6 py-2 rounded text-xl text-black transition-colors ${
+          isButtonEnabled ? 'bg-sky-500 hover:bg-sky-600' : 'bg-gray-400'
         }`}
         disabled={!isButtonEnabled}
       >

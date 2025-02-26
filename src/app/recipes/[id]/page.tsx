@@ -13,7 +13,7 @@ export default async function RecipeDetailsPage({
   const recipeDetails = await fetchRecipeDetails(id);
 
   return (
-    <div className="min-h-screen bg-gray-800 p-6 flex flex-col items-center">
+    <div className="min-h-screen bg-violet-700 p-6 flex flex-col items-center">
       <Suspense fallback={<RecipeDetailsLoader />}>
         <RecipeDetails recipeDetails={recipeDetails} />
       </Suspense>

@@ -22,8 +22,8 @@ export default function Home() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-600 p-4">
-      <h1 className="text-2xl font-bold mb-4">Recipe Search</h1>
+    <div className="flex flex-col items-center justify-center min-h-screen bg-violet-700 p-4">
+      <h1 className="text-4xl font-bold mb-6 text-rose-0">Recipe Search</h1>
       <SearchForm onSubmit={handleSearchSubmit} />
     </div>
   );

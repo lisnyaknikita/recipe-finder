@@ -9,16 +9,16 @@ type RecipeCardProps = {
 
 export const RecipeCard = ({ id, title, image }: RecipeCardProps) => {
   return (
-    <li className="block bg-slate-900 p-4 rounded-lg shadow-md hover:shadow-lg transition">
+    <li className="block bg-indigo-900 p-4 rounded-lg shadow-md hover:shadow-lg transition mb-3 text-rose-50">
       <Link href={`/recipes/${id}`}>
         <Image
           src={image}
           alt={title}
           width={300}
-          height={200}
-          className="w-full h-48 object-cover rounded-md text-white"
+          height={300}
+          className="w-full h-64 object-cover rounded-md text-white"
         />
-        <h2 className="text-lg font-semibold mt-2">{title}</h2>
+        <h2 className="text-xl font-semibold mt-2">{title}</h2>
       </Link>
     </li>
   );

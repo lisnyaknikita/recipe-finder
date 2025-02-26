@@ -1,3 +1,7 @@
 export const RecipeDetailsLoader = () => {
-  return <p className="text-center text-white">Loading recipe details...</p>;
+  return (
+    <div className="flex justify-center items-center h-20">
+      <div className="w-10 h-10 border-4 border-white border-t-transparent rounded-full animate-spin"></div>
+    </div>
+  );
 };

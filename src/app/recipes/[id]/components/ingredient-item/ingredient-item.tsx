@@ -4,7 +4,7 @@ type IngredientItemProps = {
 
 export const IngredientItem = ({ ingredient }: IngredientItemProps) => {
   return (
-    <li key={ingredient.id} className="text-gray-700">
+    <li key={ingredient.id} className="text-rose-50">
       {ingredient.original}
     </li>
   );
