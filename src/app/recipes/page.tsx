@@ -1,4 +1,5 @@
 import { Suspense } from 'react';
+
 import { RecipeList } from './components/recipes-list/recipes-list';
 import { RecipesLoader } from './components/recipes-loader/recipes-loader';
 

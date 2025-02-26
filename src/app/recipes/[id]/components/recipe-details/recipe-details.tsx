@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { IngredientList } from '../ingredient-list/ingredient-list';
 
 type Ingredient = {
   id: number;
@@ -33,16 +34,7 @@ export const RecipeDetails = async ({
         />
       )}
 
-      <div className="bg-white p-6 rounded-lg shadow-md max-w-lg w-full">
-        <h2 className="text-2xl font-semibold mb-4">Ingredients</h2>
-        <ul className="list-disc pl-5 space-y-2">
-          {recipeDetails.extendedIngredients?.map((ingredient: Ingredient) => (
-            <li key={ingredient.id} className="text-gray-700">
-              {ingredient.original}
-            </li>
-          ))}
-        </ul>
-      </div>
+      <IngredientList ingredients={recipeDetails.extendedIngredients} />
     </>
   );
 };
